@@ -1,5 +1,24 @@
 /* Your Code Here */
 
+function createEmployeeRecord(arr) {
+    return {
+        firstName: arr[0],
+        familyName: arr[1],
+        title: arr[2],
+        payPerHour: arr[3],
+        timeInEvents: [],
+        timeOutEvents: []
+    }
+}
+
+function createEmployeeRecords(arr) {
+    return arr.map(createEmployeeRecord)
+}
+
+function createTimeInEvent(employee, datetime) {
+    employee.timeInEvents.push(Date.parse(datetime))
+}
+
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
